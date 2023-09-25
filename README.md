@@ -1,2 +1,10 @@
 # aptos-dictionary-contract
-Move module for Aptos Dictionary dApp.
+The smart contract of Aptos Dictionary dApp, powered by the [`Move Language`](https://aptos.dev/move/move-on-aptos/).
+
+The dApp is live at [`berzanxyz.github.io`](https://berzanxyz.github.io/aptos-dictionary-interface).
+
+An interface for Aptos Dictionary resides in [`aptos-dictionary-interface`](https://github.com/berzanxyz/aptos-dictionary-interface).
+
+## Developing
+- Clone the repo with `git clone https://github.com/berzanxyz/aptos-dictionary-contract.git`
+- You can use Dev Containers for getting the development environment ready.
