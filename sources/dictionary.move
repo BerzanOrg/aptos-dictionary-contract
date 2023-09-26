@@ -2,9 +2,10 @@ module aptos_dictionary_contract::dictionary {
     use std::string::String;
     use std::signer;
     use std::vector;
+    use std::timestamp;
 
     /// The address that published the module. It also stores the dictionary resource.
-    const MODULE_ADDRESS: address = @0xa584955f037c08173d6cfae3d042bcc710f88b3581f55cbe2f42b51cf70e5c6d;
+    const MODULE_ADDRESS: address = @0x924a57c844cee4f0733134ecaf57bd82145df9a472f46940c558100a036e1908;
 
     /// The error to represent unauthorized operations.
     const ERROR_UNAUTHORIZED: u64 = 10;
@@ -23,6 +24,7 @@ module aptos_dictionary_contract::dictionary {
         word: String,
         content: String,
         author_addr: address,
+        time: u64,
     }
 
     /// The type to represent an author profile in the dictionary.
@@ -56,6 +58,8 @@ module aptos_dictionary_contract::dictionary {
         // get the address of the signer
         let signer_addr = signer::address_of(account);
 
+        // get the current Unix time in seconds
+        let time = timestamp::now_seconds();
 
         // borrow the dictionary resource of the module address
         let dictionary = borrow_global_mut<Dictionary>(MODULE_ADDRESS);
@@ -65,6 +69,7 @@ module aptos_dictionary_contract::dictionary {
             word: word,
             content: content,
             author_addr: signer_addr,
+            time: time,
         };
 
         // add the new definition to the end of the definitions
