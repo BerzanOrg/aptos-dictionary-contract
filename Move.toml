@@ -4,7 +4,7 @@ version = "1.0.0"
 authors = []
 
 [addresses]
-aptos_dictionary_contract = "8c3f19310988b1638dcb5ff645741731f9240fa660376edea13e7c4acd6116ec"
+aptos_dictionary_contract = "a584955f037c08173d6cfae3d042bcc710f88b3581f55cbe2f42b51cf70e5c6d"
 
 [dev-addresses]
 
