@@ -4,7 +4,7 @@ module aptos_dictionary_contract::dictionary {
     use std::vector;
 
     /// The address that published the module. It also stores the dictionary resource.
-    const MODULE_ADDRESS: address = @0x8c3f19310988b1638dcb5ff645741731f9240fa660376edea13e7c4acd6116ec;
+    const MODULE_ADDRESS: address = @0xa584955f037c08173d6cfae3d042bcc710f88b3581f55cbe2f42b51cf70e5c6d;
 
     /// The error to represent unauthorized operations.
     const ERROR_UNAUTHORIZED: u64 = 10;
@@ -49,7 +49,7 @@ module aptos_dictionary_contract::dictionary {
     }
 
     /// The entry function used to add new definitions in the dictionary.
-    public entry fun add_definitions(account: &signer, word: String, content: String) acquires Dictionary {
+    public entry fun add_definition(account: &signer, word: String, content: String) acquires Dictionary {
         // make sure the dictionary resource of the module address exists
         assert!(exists<Dictionary>(MODULE_ADDRESS), ERROR_NOT_INITIALIZED);
 
