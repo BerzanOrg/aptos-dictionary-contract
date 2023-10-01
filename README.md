@@ -5,6 +5,8 @@ The dApp is live at [`berzanxyz.github.io`](https://berzanxyz.github.io/aptos-di
 
 An interface for Aptos Dictionary resides in [`aptos-dictionary-interface`](https://github.com/berzanxyz/aptos-dictionary-interface).
 
+Events and tests are not implemented as this project is very basic.
+
 ## Developing
 - Clone the repo with `git clone https://github.com/berzanxyz/aptos-dictionary-contract.git`
 - You can use Dev Containers for getting the development environment ready.
